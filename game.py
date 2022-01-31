@@ -1,9 +1,11 @@
 
-
+import os
 import random
 
+
+player_name = os.getenv("PLAYER_NAME", default="Player One")
 print("-------------------")
-print("Welcome 'Player One' to my Rock-Paper-Scissors game...")
+print("Welcome ",player_name," to my Rock-Paper-Scissors game...")
 print("-------------------")
 userChoice = input("Please choose either 'rock', 'paper', or 'scissors': ")
 userChoice = userChoice.lower()
