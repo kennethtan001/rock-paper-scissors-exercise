@@ -31,6 +31,8 @@ print("-------------------")
 
 if (userChoice == computerChoice):
     print("Game is a tie!")
+    print("-------------------")
+    print("Thanks for playing. Please play again!")
 if((userChoice == "rock" and computerChoice == "paper") or (userChoice == "paper" and 
 computerChoice == "scissors") or (userChoice == "scissors" and computerChoice == "rock")):
     print("Oh, the computer won. It's ok.")
