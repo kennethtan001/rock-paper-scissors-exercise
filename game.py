@@ -26,22 +26,22 @@ if __name__ == "__main__":
     print("-------------------")
     print("Welcome ",player_name," to my Rock-Paper-Scissors game...")
     print("-------------------")
-    userChoice = input("Please choose either 'rock', 'paper', or 'scissors': ")
-    userChoice = userChoice.lower()
-    if (userChoice == "rock"):
-        print("You chose: ",userChoice)
-    elif (userChoice == "paper"):
-        print("You chose: ",userChoice)
-    elif (userChoice == "scissors"):
-        print("You chose: ",userChoice)
+    user_choice = input("Please choose either 'rock', 'paper', or 'scissors': ")
+    user_choice = user_choice.lower()
+    if (user_choice == "rock"):
+        print("You chose: ",user_choice)
+    elif (user_choice == "paper"):
+        print("You chose: ",user_choice)
+    elif (user_choice == "scissors"):
+        print("You chose: ",user_choice)
     else:
         print("Sorry that is not a valid option")
         exit()
 
 
     options = ["rock", "paper", "scissors"]
-    computerChoice = random.choice(options)
-    print ("Computer Choice: ", computerChoice)
+    computer_choice = random.choice(options)
+    print ("Computer Choice: ", computer_choice)
     print("-------------------")
 
 
@@ -57,5 +57,14 @@ if __name__ == "__main__":
     #if((userChoice == "paper" and computerChoice == "rock") or (userChoice == "scissors" and 
     #computerChoice == "paper") or (userChoice == "rock" and computerChoice == "scissors")):
     #    print("Congrats, you won!")
-    #    print("-------------------")
-    #    print("Thanks for playing. Please play again!")
+
+
+    winner = determine_winner(userChoice,computerChoice)
+    if (winner == user_choice):
+        print("Congrats, you won!")
+    if (winner == computer_choice):
+        print("Oh, the computer won. It's ok.")
+    if (winner == None):
+        print("Game is a tie!")
+    print("-------------------")
+    print("Thanks for playing. Please play again!")
