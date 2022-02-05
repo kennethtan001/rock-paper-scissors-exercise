@@ -5,7 +5,7 @@ import random
 def determine_winner(choice_1, choice_2):
 
     if (choice_1 == choice_2):
-        winner = "None"
+        winner = None
     if(choice_1 == "rock" and choice_2 == "paper"):
         winner = "paper"
     if(choice_1 == "rock" and choice_2 == "scissors"):
@@ -44,22 +44,8 @@ if __name__ == "__main__":
     print ("Computer Choice: ", computer_choice)
     print("-------------------")
 
-
-    #if (userChoice == computerChoice):
-    #    print("Game is a tie!")
-    #    print("-------------------")
-    #    print("Thanks for playing. Please play again!")
-    #if((userChoice == "rock" and computerChoice == "paper") or (userChoice == "paper" and 
-    #computerChoice == "scissors") or (userChoice == "scissors" and computerChoice == "rock")):
-    #    print("Oh, the computer won. It's ok.")
-    #    print("-------------------")
-    #    print("Thanks for playing. Please play again!")
-    #if((userChoice == "paper" and computerChoice == "rock") or (userChoice == "scissors" and 
-    #computerChoice == "paper") or (userChoice == "rock" and computerChoice == "scissors")):
-    #    print("Congrats, you won!")
-
-
-    winner = determine_winner(userChoice,computerChoice)
+    #Determine winner with determine_winner function
+    winner = determine_winner(user_choice,computer_choice)
     if (winner == user_choice):
         print("Congrats, you won!")
     if (winner == computer_choice):
